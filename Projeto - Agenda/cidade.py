@@ -27,7 +27,9 @@ class Cidades:
   @classmethod
   def listar(cls):
     cls.abrir()
-    return cls.objetos
+    for c in cls.objetos:
+      if c.id == id: return c
+      return cls.objetos
   @classmethod
   def listar_id(cls, id):
     cls.abrir()
