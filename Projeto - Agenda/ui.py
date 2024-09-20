@@ -1,5 +1,6 @@
 from banda import Banda, Bandas
 from apresentação import Apresentação, Apresentações
+from cidade import Cidade, Cidades
 from datetime import datetime
 
 
@@ -11,9 +12,9 @@ class UI:
     print("Cadastro de Cidades")
     print("  5 - Inserir, 6 - listar, 7 - atualizar, 8 - excluir")
     print("Cadastro de Apresentações")
-    print("  1 - Inserir, 2 - listar, 3 - atualizar, 4 - excluir")
+    print("  9 - Inserir, 10 - listar, 11 - atualizar, 12 - excluir")
     print("Outras opções")
-    print("  9 - Fim")
+    print("  13 - Fim")
     return int(input("Informe uma opção: "))
 
   @staticmethod
@@ -25,10 +26,10 @@ class UI:
       if op == 2: UI.banda_listar()
       if op == 3: UI.banda_atualizar()
       if op == 4: UI.banda_excluir()
-      if op == 5: UI.apresentação_inserir()
-      if op == 6: UI.apresentação_listar()
-      if op == 7: UI.apresentação_atualizar()
-      if op == 8: UI.apresentação_excluir()
+      if op == 5: UI.cidade_inserir()
+      if op == 6: UI.cidade_listar()
+      if op == 7: UI.cidade_atualizar()
+      if op == 8: UI.cidade_excluir()
       if op == 9: UI.apresentação_inserir()
       if op == 10: UI.apresentação_listar()
       if op == 11: UI.apresentação_atualizar()
@@ -36,9 +37,9 @@ class UI:
 
   @staticmethod
   def banda_inserir():
-    nome = input("Informe o nome: ")
+    nome = input("Informe o nome da banda: ")
     insta = input("Informe o instagram da banda: ")
-    fone = input("Informe o fone: ")
+    fone = input("Informe o telefone da banda: ")
     b = Banda(0, nome, insta, fone)
     Bandas.inserir(b)
 
