@@ -5,7 +5,7 @@
 # D - Delete - Exclui um objeto da lista
 
 import json
-from crud import CRUD
+from Models.crud import CRUD
 
 # Modelo
 class Versão:
