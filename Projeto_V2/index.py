@@ -14,6 +14,7 @@ from templates.ListarVersoes import ListarVersãoUI
 from Views import View
 
 import streamlit as st
+import pandas as pd
 
 class IndexUI:
     def menu_visitante():
@@ -22,12 +23,12 @@ class IndexUI:
         if op == "Abrir Conta": AbrirContaUI.main()
                
     def menu_usuario():            
-        op = st.sidebar.selectbox("Menu", ["Cadastro de Usuarios", "Cadastro de Fabricantes", "Cadastro de Veiculos", "Cadastro de Profissionais", "Cadastro de Versões", "Abrir Agenda do Dia", "Meus Dados"])
-        if op == "Cadastro de Usuarios": ManterUsuarioUI.main()
-        if op == "Cadastro de Fabricantes": ManterFabricanteUI.main()
-        if op == "Cadastro de Veiculos": ManterVeiculoUI.main()
-        if op == "Cadastro de Profissionais": ManterProfissionalUI.main()
-        if op == "Cadastro de Versões": ManterVersaoUI.main()
+        op = st.sidebar.selectbox("Menu", ["Usuarios", "Fabricantes", "Veiculos", "Profissionais", "Versões", "Meus Dados"])
+        if op == "Usuarios": ManterUsuarioUI.main()
+        if op == "Fabricantes": ManterFabricanteUI.main()
+        if op == "Veiculos": ManterVeiculoUI.main()
+        if op == "Profissionais": ManterProfissionalUI.main()
+        if op == "Versões": ManterVersaoUI.main()
         if op == "Meus Dados": MeusDadosUsuarioUI.main()
 
     def menu_profissional():

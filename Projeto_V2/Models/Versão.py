@@ -5,6 +5,8 @@
 # D - Delete - Exclui um objeto da lista
 
 import json
+import pandas as pd
+import matplotlib.pyplot as plt
 from Models.crud import CRUD
 
 # Modelo
@@ -41,6 +43,12 @@ class Versões(CRUD):
           cls.objetos.append(c)
     except FileNotFoundError:
       pass
+
+#  @classmethod
+#  def grafico(cls):
+#    with open('versões.json', mode='r', encoding='utf-8') as arquivo:
+#      versoes = json.load(arquivo)
+#      df = pd.DataFrame(arquivo)
 
 #versão = Versão(id=1, nome="HB20-TSI", id_veiculo="25", descricão="carro massa")
 #

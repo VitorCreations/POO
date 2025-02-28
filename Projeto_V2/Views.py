@@ -83,12 +83,15 @@ class View:
 
 
     def versao_inserir(id_veiculo, nome, ano, preco, ipva, seguro, garantia, porte, lugares):
-        c = Versão(0, nome, ano, preco, ipva, seguro, garantia, porte, lugares)
+        c = Versão(id_veiculo, nome, ano, preco, ipva, seguro, garantia, porte, lugares)
         c.id_veiculo = id_veiculo
         Versões.inserir(c)
 
     def versao_listar():
-        return Versões.listar()    
+        return Versões.listar()   
+
+    def versão_grafico():
+        return Versões.grafico() 
 
     def versao_pesquisar(id_veiculo):
         r = []
@@ -119,6 +122,7 @@ class View:
 
     def veiculo_listar():
         return Veiculos.listar()    
+    
 
     def veiculo_listar_id(id):
         return Veiculos.listar_id(id)    
